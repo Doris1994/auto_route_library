@@ -15,6 +15,7 @@ abstract class AutoRoutePage<T> extends Page<T> {
   final _popCompleter = Completer<T?>();
 
   Future<T?> get popped => _popCompleter.future;
+  Widget get childWidget => _child;
 
   AutoRoutePage({
     required this.routeData,
